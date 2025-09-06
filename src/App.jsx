@@ -29,7 +29,7 @@ const App = () => {
 
   // Debounce the search term to prevent making too many API requests
   // by waiting for the user to stop typing for 500ms
-  useDebounce(() => setDebouncedSearchTerm(searchTerm), 500, [searchTerm])
+  useDebounce(() => setDebouncedSearchTerm(searchTerm), 1000, [searchTerm])
 
   const fetchMovies = async (query = '') => {
     setIsLoading(true);
